@@ -1,6 +1,7 @@
 import React  , { Component } from 'react';
 import { render } from 'react-dom';
-const data = 'testteest'
+import  './main.css';
+const data = 'testteest';
 const items = [
   {
     id : 1 ,
@@ -18,11 +19,17 @@ const items = [
 class App extends Component {
   render() {
     return (
-      <h1>hello world!<Koy/>
-      {items.map((item)=>{
-        return <div key={item.id}><p>{item.id} {item.name}</p></div>
-      })}
-      </h1>
+      <div>
+          <ul>
+            <li >index</li>
+            <li >about</li>
+          </ul>
+        <h1>hello world!<Koy/>
+        {items.map((item)=>{
+          return <div key={item.id}><p>{item.id} {item.name}</p></div>
+        })}
+        </h1>
+      </div>
     )
   }
 }
