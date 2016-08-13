@@ -87,10 +87,13 @@ import React from 'react';
 import { render } from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import MyAwesomeReactComponent from './Component/nav.jsx';
-
+import MyAppBar from './Component/AppBar.jsx';
 const App = () => (
   <MuiThemeProvider>
-    <MyAwesomeReactComponent />
+    <div>
+      <MyAppBar />
+      <MyAwesomeReactComponent />
+    </div>
   </MuiThemeProvider>
 );
 
