@@ -5,10 +5,7 @@ import TextField from 'material-ui/TextField'
 class InputText extends Component {
   render() {
     return (
-      <div>
         <TextField hintText="Subject" />
-        <TextField hintText="Name" />
-      </div>
     )
   }
 }

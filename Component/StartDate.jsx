@@ -5,7 +5,7 @@ import DatePicker from 'material-ui/DatePicker';
 class StartDate extends Component {
   render () {
     return (
-      <DatePicker hintText="StartDate" mode="landscape" hintText="en-US locale"/>
+      <DatePicker hintText="StartDate" mode="landscape" />
     )
   }
 }

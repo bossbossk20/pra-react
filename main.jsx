@@ -87,7 +87,8 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import MyAppBar from './Component/AppBar.jsx'
-import InputText from './Component/TextField.jsx'
+import TextFieldName from './Component/TextFieldName.jsx'
+import TextFieldSubject from './Component/TextFieldSubject.jsx'
 import StartDate from './Component/StartDate.jsx'
 import DueDate from './Component/DueDate.jsx'
 import injectTapEventPlugin from 'react-tap-event-plugin'
@@ -105,7 +106,8 @@ class App extends Component {
       <MuiThemeProvider>
           <div>
             <MyAppBar />
-            <InputText />
+            <TextFieldSubject />
+            <TextFieldName />
             <StartDate />
             <DueDate />
             <AddButton />
@@ -119,7 +121,7 @@ class AddButton extends Component{
     super()
     this.onClick = this.onClick.bind(this)
     this.state = {
-      name : 'hola Nextzy' ,
+      name : 'hola' ,
       value : 0
     }
   }
