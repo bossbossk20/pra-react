@@ -83,18 +83,54 @@
 //   }
 // }
 
-import React from 'react';
-import { render } from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MyAwesomeReactComponent from './Component/nav.jsx';
-import MyAppBar from './Component/AppBar.jsx';
-const App = () => (
-  <MuiThemeProvider>
-    <div>
-      <MyAppBar />
-      <MyAwesomeReactComponent />
-    </div>
-  </MuiThemeProvider>
-);
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import MyAppBar from './Component/AppBar.jsx'
+import InputText from './Component/TextField.jsx'
+import StartDate from './Component/StartDate.jsx'
+import DueDate from './Component/DueDate.jsx'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+injectTapEventPlugin();
+// const App = () => (
+//   <MuiThemeProvider>
+//     <div>
+//       <MyAppBar />
+//     </div>
+//   </MuiThemeProvider>
+// );
+class App extends Component {
+  render () {
+    return (
+      <MuiThemeProvider>
+          <div>
+            <MyAppBar />
+            <InputText />
+            <StartDate />
+            <DueDate />
+            <AddButton />
+          </div>
+      </MuiThemeProvider>
+    )
+  }
+}
+class AddButton extends Component{
+  constructor(){
+    super()
+    this.onClick = this.onClick.bind(this)
+    this.state = {
+      name : 'hola Nextzy' ,
+      value : 0
+    }
+  }
+  onClick() {
+    this.setState({name : "yohooo" , value: this.state.value +1})
+  }
+  render() {
+    return (
+      <button onClick={this.onClick}>{this.state.name}{this.state.value}</button>
+    )
+  }
+}
 
 render(<App /> ,  document.getElementById('app'))

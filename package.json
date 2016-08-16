@@ -13,8 +13,12 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-router": "^2.6.0",
+    "react-tap-event-plugin": "^1.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "babel-preset-stage-1": "^6.13.0"
   }
 }
